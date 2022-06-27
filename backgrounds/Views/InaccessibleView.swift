@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct InaccessibleView: View {
+    @EnvironmentObject var appState: AppState
     var body: some View {
         VStack {
             VStack(spacing: 20) {

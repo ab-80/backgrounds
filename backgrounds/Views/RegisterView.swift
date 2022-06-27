@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct RegisterView: View {
-    @State var firstName: String = ""
+    @EnvironmentObject var appState: AppState
+    @State private var firstName: String = ""
     @State private var showAlert = false
     
     var body: some View {
@@ -45,7 +46,7 @@ struct RegisterView: View {
         else {
             DefaultsManager.setFirstName(value: self.firstName)
             DefaultsManager.setIsRegistered(value: true)
-            WelcomeView()
+            appState.viewToShow = EnumManager.ViewName.welcome
         }
     }
 }

@@ -7,13 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E17A33D2868D33100039D24 /* EnumManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E17A33C2868D33100039D24 /* EnumManager.swift */; };
 		1ED0B07128652D40004B4536 /* backgroundsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED0B07028652D40004B4536 /* backgroundsApp.swift */; };
 		1ED0B07328652D40004B4536 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED0B07228652D40004B4536 /* ContentView.swift */; };
 		1ED0B07528652D42004B4536 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1ED0B07428652D42004B4536 /* Assets.xcassets */; };
 		1ED0B07828652D42004B4536 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1ED0B07728652D42004B4536 /* Preview Assets.xcassets */; };
 		1ED0B08028652E80004B4536 /* HealthstoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED0B07F28652E80004B4536 /* HealthstoreManager.swift */; };
 		1ED0B08328652F0E004B4536 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED0B08228652F0E004B4536 /* WelcomeView.swift */; };
-		1ED0B0852865323E004B4536 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED0B0842865323E004B4536 /* TestView.swift */; };
+		1ED0B0852865323E004B4536 /* InformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED0B0842865323E004B4536 /* InformationView.swift */; };
 		1ED0B08928653F4C004B4536 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ED0B08828653F4C004B4536 /* HealthKit.framework */; };
 		1ED0B08B28653FA7004B4536 /* InaccessibleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED0B08A28653FA7004B4536 /* InaccessibleView.swift */; };
 		1ED0B08D2867A400004B4536 /* UtilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED0B08C2867A400004B4536 /* UtilityManager.swift */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1E17A33C2868D33100039D24 /* EnumManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumManager.swift; sourceTree = "<group>"; };
 		1ED0B06D28652D40004B4536 /* backgrounds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = backgrounds.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1ED0B07028652D40004B4536 /* backgroundsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = backgroundsApp.swift; sourceTree = "<group>"; };
 		1ED0B07228652D40004B4536 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -31,7 +33,7 @@
 		1ED0B07728652D42004B4536 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1ED0B07F28652E80004B4536 /* HealthstoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthstoreManager.swift; sourceTree = "<group>"; };
 		1ED0B08228652F0E004B4536 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
-		1ED0B0842865323E004B4536 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
+		1ED0B0842865323E004B4536 /* InformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationView.swift; sourceTree = "<group>"; };
 		1ED0B08628653F4B004B4536 /* backgrounds.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = backgrounds.entitlements; sourceTree = "<group>"; };
 		1ED0B08828653F4C004B4536 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		1ED0B08A28653FA7004B4536 /* InaccessibleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InaccessibleView.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 				1ED0B08E2867A7D7004B4536 /* DefaultsManager.swift */,
 				1ED0B0902867AEEA004B4536 /* ConstantKeysManager.swift */,
 				1ED0B0942867C756004B4536 /* ExtensionManager.swift */,
+				1E17A33C2868D33100039D24 /* EnumManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -109,7 +112,7 @@
 			children = (
 				1ED0B07228652D40004B4536 /* ContentView.swift */,
 				1ED0B08228652F0E004B4536 /* WelcomeView.swift */,
-				1ED0B0842865323E004B4536 /* TestView.swift */,
+				1ED0B0842865323E004B4536 /* InformationView.swift */,
 				1ED0B08A28653FA7004B4536 /* InaccessibleView.swift */,
 				1ED0B0922867AFF8004B4536 /* RegisterView.swift */,
 			);
@@ -196,12 +199,13 @@
 			files = (
 				1ED0B08328652F0E004B4536 /* WelcomeView.swift in Sources */,
 				1ED0B0932867AFF8004B4536 /* RegisterView.swift in Sources */,
-				1ED0B0852865323E004B4536 /* TestView.swift in Sources */,
+				1ED0B0852865323E004B4536 /* InformationView.swift in Sources */,
 				1ED0B07328652D40004B4536 /* ContentView.swift in Sources */,
 				1ED0B0952867C757004B4536 /* ExtensionManager.swift in Sources */,
 				1ED0B08F2867A7D7004B4536 /* DefaultsManager.swift in Sources */,
 				1ED0B07128652D40004B4536 /* backgroundsApp.swift in Sources */,
 				1ED0B0912867AEEA004B4536 /* ConstantKeysManager.swift in Sources */,
+				1E17A33D2868D33100039D24 /* EnumManager.swift in Sources */,
 				1ED0B08D2867A400004B4536 /* UtilityManager.swift in Sources */,
 				1ED0B08028652E80004B4536 /* HealthstoreManager.swift in Sources */,
 				1ED0B08B28653FA7004B4536 /* InaccessibleView.swift in Sources */,

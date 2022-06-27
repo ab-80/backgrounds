@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct WelcomeView: View {
+    @EnvironmentObject var appState: AppState
+    
     var body: some View {
         let greetingString = UtilityManager.getGreeting()
         VStack {
@@ -16,6 +18,9 @@ struct WelcomeView: View {
             }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .onTapGesture {
+            appState.viewToShow = EnumManager.ViewName.information
+        }
     }
 }
 
