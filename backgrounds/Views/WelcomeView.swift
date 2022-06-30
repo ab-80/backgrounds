@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct WelcomeView: View {
+    @Environment(\.calendar) var calendar
     @EnvironmentObject var appState: AppState
     
     var body: some View {
@@ -15,6 +16,7 @@ struct WelcomeView: View {
         VStack {
             VStack(spacing: 20){
                 Text(greetingString).bold().font(.title)
+                WorkoutMonthView()
             }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -24,8 +26,8 @@ struct WelcomeView: View {
     }
 }
 
-struct WelcomeView_Previews: PreviewProvider {
+/*struct WelcomeView_Previews: PreviewProvider {
     static var previews: some View {
         WelcomeView()
     }
-}
+}*/
