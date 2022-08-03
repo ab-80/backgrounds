@@ -16,7 +16,7 @@ struct WelcomeView: View {
         VStack {
             VStack(spacing: 20){
                 Text(greetingString).bold().font(.title)
-                WorkoutMonthView()
+                SleepMonthView()
             }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)

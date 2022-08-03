@@ -7,12 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1E06BD1A286D201300CF083B /* CalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E06BD19286D201300CF083B /* CalView.swift */; };
-		1E06BD1D286D36AA00CF083B /* MonthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E06BD1C286D36AA00CF083B /* MonthView.swift */; };
-		1E06BD1F286D37C700CF083B /* WeekView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E06BD1E286D37C700CF083B /* WeekView.swift */; };
-		1E06BD21286D37F400CF083B /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E06BD20286D37F400CF083B /* CalendarView.swift */; };
-		1E06BD23286D3F5900CF083B /* WorkoutMonthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E06BD22286D3F5900CF083B /* WorkoutMonthView.swift */; };
+		1E06BD252890B04E00CF083B /* SleepMonthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E06BD242890B04E00CF083B /* SleepMonthView.swift */; };
 		1E17A33D2868D33100039D24 /* EnumManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E17A33C2868D33100039D24 /* EnumManager.swift */; };
+		1E62253A289A15E90038147E /* WeekView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E622539289A15E90038147E /* WeekView.swift */; };
 		1ED0B07128652D40004B4536 /* backgroundsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED0B07028652D40004B4536 /* backgroundsApp.swift */; };
 		1ED0B07328652D40004B4536 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED0B07228652D40004B4536 /* ContentView.swift */; };
 		1ED0B07528652D42004B4536 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1ED0B07428652D42004B4536 /* Assets.xcassets */; };
@@ -30,12 +27,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1E06BD19286D201300CF083B /* CalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalView.swift; sourceTree = "<group>"; };
-		1E06BD1C286D36AA00CF083B /* MonthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthView.swift; sourceTree = "<group>"; };
-		1E06BD1E286D37C700CF083B /* WeekView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekView.swift; sourceTree = "<group>"; };
-		1E06BD20286D37F400CF083B /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
-		1E06BD22286D3F5900CF083B /* WorkoutMonthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutMonthView.swift; sourceTree = "<group>"; };
+		1E06BD242890B04E00CF083B /* SleepMonthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepMonthView.swift; sourceTree = "<group>"; };
 		1E17A33C2868D33100039D24 /* EnumManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumManager.swift; sourceTree = "<group>"; };
+		1E622539289A15E90038147E /* WeekView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekView.swift; sourceTree = "<group>"; };
 		1ED0B06D28652D40004B4536 /* backgrounds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = backgrounds.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1ED0B07028652D40004B4536 /* backgroundsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = backgroundsApp.swift; sourceTree = "<group>"; };
 		1ED0B07228652D40004B4536 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -69,9 +63,8 @@
 		1E06BD1B286D366300CF083B /* CalendarViews */ = {
 			isa = PBXGroup;
 			children = (
-				1E06BD1C286D36AA00CF083B /* MonthView.swift */,
-				1E06BD1E286D37C700CF083B /* WeekView.swift */,
-				1E06BD20286D37F400CF083B /* CalendarView.swift */,
+				1E06BD242890B04E00CF083B /* SleepMonthView.swift */,
+				1E622539289A15E90038147E /* WeekView.swift */,
 			);
 			path = CalendarViews;
 			sourceTree = "<group>";
@@ -136,8 +129,6 @@
 				1ED0B0842865323E004B4536 /* InformationView.swift */,
 				1ED0B08A28653FA7004B4536 /* InaccessibleView.swift */,
 				1ED0B0922867AFF8004B4536 /* RegisterView.swift */,
-				1E06BD19286D201300CF083B /* CalView.swift */,
-				1E06BD22286D3F5900CF083B /* WorkoutMonthView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -222,21 +213,18 @@
 			files = (
 				1ED0B08328652F0E004B4536 /* WelcomeView.swift in Sources */,
 				1ED0B0932867AFF8004B4536 /* RegisterView.swift in Sources */,
-				1E06BD21286D37F400CF083B /* CalendarView.swift in Sources */,
 				1ED0B0852865323E004B4536 /* InformationView.swift in Sources */,
 				1ED0B07328652D40004B4536 /* ContentView.swift in Sources */,
 				1ED0B0952867C757004B4536 /* ExtensionManager.swift in Sources */,
+				1E62253A289A15E90038147E /* WeekView.swift in Sources */,
 				1ED0B08F2867A7D7004B4536 /* DefaultsManager.swift in Sources */,
-				1E06BD1F286D37C700CF083B /* WeekView.swift in Sources */,
 				1ED0B07128652D40004B4536 /* backgroundsApp.swift in Sources */,
 				1ED0B0912867AEEA004B4536 /* ConstantKeysManager.swift in Sources */,
 				1E17A33D2868D33100039D24 /* EnumManager.swift in Sources */,
 				1ED0B08D2867A400004B4536 /* UtilityManager.swift in Sources */,
 				1ED0B08028652E80004B4536 /* HealthstoreManager.swift in Sources */,
-				1E06BD1A286D201300CF083B /* CalView.swift in Sources */,
-				1E06BD23286D3F5900CF083B /* WorkoutMonthView.swift in Sources */,
+				1E06BD252890B04E00CF083B /* SleepMonthView.swift in Sources */,
 				1ED0B08B28653FA7004B4536 /* InaccessibleView.swift in Sources */,
-				1E06BD1D286D36AA00CF083B /* MonthView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

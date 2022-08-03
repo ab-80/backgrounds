@@ -1,46 +1,28 @@
 //
-//  Original author of this file's source code is mecid on GitHub:
-//  https://gist.github.com/mecid/f8859ea4bdbd02cf5d440d58e936faec
+//  WeekView.swift
+//  backgrounds
+//
+//  Created by Andrew Bergerson on 8/2/22.
 //
 
 import SwiftUI
 
-struct WeekView<DateView>: View where DateView: View {
-    @Environment(\.calendar) var calendar
-
-    let week: Date
-    let content: (Date) -> DateView
-
-    init(week: Date, @ViewBuilder content: @escaping (Date) -> DateView) {
+struct WeekView: View {
+    
+    let week: [String]
+    
+    init(week: [String]) {
         self.week = week
-        self.content = content
     }
-
-    private var days: [Date] {
-        guard
-            let weekInterval = calendar.dateInterval(of: .weekOfYear, for: week)
-            else { return [] }
-        return calendar.generateDates(
-            inside: weekInterval,
-            matching: DateComponents(hour: 0, minute: 0, second: 0)
-        )
-    }
-
+    
     var body: some View {
-        HStack {
-            ForEach(days, id: \.self) { date in
-                HStack {
-                    if self.calendar.isDate(self.week, equalTo: date, toGranularity: .month) {
-                        self.content(date)
-                    } else {
-                        self.content(date).hidden()
-                    }
-                }
+        HStack{
+            ForEach(week, id: \.self){ day in
+                Text(day)
             }
         }
     }
 }
-
 
 /*struct WeekView_Previews: PreviewProvider {
     static var previews: some View {
