@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1E06BD252890B04E00CF083B /* SleepMonthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E06BD242890B04E00CF083B /* SleepMonthView.swift */; };
+		1E10A7BA289EC07D00A4A90C /* DayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E10A7B9289EC07D00A4A90C /* DayView.swift */; };
 		1E17A33D2868D33100039D24 /* EnumManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E17A33C2868D33100039D24 /* EnumManager.swift */; };
 		1E62253A289A15E90038147E /* WeekView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E622539289A15E90038147E /* WeekView.swift */; };
 		1ED0B07128652D40004B4536 /* backgroundsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED0B07028652D40004B4536 /* backgroundsApp.swift */; };
@@ -28,6 +29,7 @@
 
 /* Begin PBXFileReference section */
 		1E06BD242890B04E00CF083B /* SleepMonthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepMonthView.swift; sourceTree = "<group>"; };
+		1E10A7B9289EC07D00A4A90C /* DayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayView.swift; sourceTree = "<group>"; };
 		1E17A33C2868D33100039D24 /* EnumManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumManager.swift; sourceTree = "<group>"; };
 		1E622539289A15E90038147E /* WeekView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekView.swift; sourceTree = "<group>"; };
 		1ED0B06D28652D40004B4536 /* backgrounds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = backgrounds.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -65,6 +67,7 @@
 			children = (
 				1E06BD242890B04E00CF083B /* SleepMonthView.swift */,
 				1E622539289A15E90038147E /* WeekView.swift */,
+				1E10A7B9289EC07D00A4A90C /* DayView.swift */,
 			);
 			path = CalendarViews;
 			sourceTree = "<group>";
@@ -212,6 +215,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1ED0B08328652F0E004B4536 /* WelcomeView.swift in Sources */,
+				1E10A7BA289EC07D00A4A90C /* DayView.swift in Sources */,
 				1ED0B0932867AFF8004B4536 /* RegisterView.swift in Sources */,
 				1ED0B0852865323E004B4536 /* InformationView.swift in Sources */,
 				1ED0B07328652D40004B4536 /* ContentView.swift in Sources */,

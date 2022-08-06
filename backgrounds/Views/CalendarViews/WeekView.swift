@@ -9,16 +9,16 @@ import SwiftUI
 
 struct WeekView: View {
     
-    let week: [String]
+    let week: [DayView]
     
-    init(week: [String]) {
+    init(week: [DayView]) {
         self.week = week
     }
     
     var body: some View {
         HStack{
             ForEach(week, id: \.self){ day in
-                Text(day)
+                day
             }
         }
     }

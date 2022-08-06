@@ -9,8 +9,8 @@ import SwiftUI
 
 struct SleepMonthView: View {
     var body: some View {
-        let last28Days: [String] = self.getDates()
-        let last4Weeks: [[String]] = self.turnMonthToWeeks(month: last28Days)
+        let last28Days: [DayView] = self.getDates()
+        let last4Weeks: [[DayView]] = self.turnMonthToWeeks(month: last28Days)
 
         ForEach(last4Weeks, id: \.self) { week in
             VStack {
@@ -19,16 +19,16 @@ struct SleepMonthView: View {
         }
     }
     
-    func getDates() -> [String] {
-        var last28Days: [String] = [String]()
+    func getDates() -> [DayView] {
+        var last28Days: [DayView] = [DayView]()
         let today = Date()
         var i: Int = 28
         while (i > 0) {
             let prevDay: Date = Calendar.current.date(byAdding: .day, value: -i, to: today)!
             let formatter: DateFormatter = DateFormatter()
             formatter.dateFormat = "dd"
-            var stringDate: String = self.removeFirstZero(input: formatter.string(from: prevDay))
-            last28Days.append(stringDate)
+            let stringDate: String = self.removeFirstZero(input: formatter.string(from: prevDay))
+            last28Days.append(DayView(date: stringDate))
             i -= 1
         }
         return last28Days
@@ -43,10 +43,10 @@ struct SleepMonthView: View {
         
     }
     
-    private func turnMonthToWeeks(month: [String]) -> [[String]] {
-        var weeks: [[String]] = [[String]]()
+    private func turnMonthToWeeks(month: [DayView]) -> [[DayView]] {
+        var weeks: [[DayView]] = [[DayView]]()
         for i in stride(from: 0, to: 28, by: 7) {
-            var week: [String] = [String]()
+            var week: [DayView] = [DayView]()
             week = Array(month[i..<(i+7)])
             weeks.append(week)
         }
