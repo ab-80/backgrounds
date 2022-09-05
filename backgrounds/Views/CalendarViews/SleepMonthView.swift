@@ -1,10 +1,3 @@
-//
-//  SleepMonthView.swift
-//  backgrounds
-//
-//  Created by Andrew Bergerson on 7/26/22.
-//
-
 import SwiftUI
 
 struct SleepMonthView: View {
@@ -12,6 +5,10 @@ struct SleepMonthView: View {
         let last28Days: [DayView] = self.getDates()
         let last4Weeks: [[DayView]] = self.turnMonthToWeeks(month: last28Days)
 
+        VStack {
+            Text("Past month of sleep data").font(.title)
+            Text("Tap to view sleep details").font(.body)
+        }
         ForEach(last4Weeks, id: \.self) { week in
             VStack {
                 WeekView(week: week)
@@ -53,9 +50,3 @@ struct SleepMonthView: View {
         return weeks
     }
 }
-
-/*struct SleepMonthView_Previews: PreviewProvider {
-    static var previews: some View {
-        SleepMonthView()
-    }
-}*/

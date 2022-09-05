@@ -1,20 +1,18 @@
-//
-//  TestView.swift
-//  backgrounds
-//
-//  Created by Andrew Bergerson on 6/23/22.
-//
-
 import SwiftUI
 
 struct InformationView: View {
-    var body: some View {
-        Text("Info view")
+    
+    var date: String
+    
+    init(date: String) {
+        self.date = date
     }
-}
-
-struct InformationView_Previews: PreviewProvider {
-    static var previews: some View {
-        InformationView()
+    
+    var body: some View {
+        VStack {
+            Text("Info view")
+            Text("Sleep data for date: \(self.date)")
+        }.frame(maxWidth: .infinity, maxHeight: .infinity)
+         .background(Color(hue: 0.656, saturation: 0.787, brightness: 0.354))
     }
 }

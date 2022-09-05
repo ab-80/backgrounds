@@ -1,10 +1,3 @@
-//
-//  DayView.swift
-//  backgrounds
-//
-//  Created by Andrew Bergerson on 8/6/22.
-//
-
 import SwiftUI
 
 struct DayView: View, Hashable {
@@ -17,16 +10,12 @@ struct DayView: View, Hashable {
     
     var body: some View {
         VStack {
-            Text(self.date)
-            }.frame(maxWidth: 45, maxHeight: 45).background(Color.blue)/*.onTapGesture {
-                appState.viewToShow = EnumManager.ViewName.information
-        }*/
+            NavigationLink() {
+                InformationView(date: self.date).navigationBarBackButtonHidden(true)
+            } label: {
+                Label(self.date, systemImage: "bolt.fill").labelStyle(.titleOnly)
+            }.buttonStyle(.plain)
+        }.frame(maxWidth: 45, maxHeight: 45).background(Color.blue)
     }
 
 }
-
-/*struct DayView_Previews: PreviewProvider {
-    static var previews: some View {
-        DayView()
-    }
-}*/

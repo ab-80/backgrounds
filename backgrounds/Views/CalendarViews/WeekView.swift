@@ -1,10 +1,3 @@
-//
-//  WeekView.swift
-//  backgrounds
-//
-//  Created by Andrew Bergerson on 8/2/22.
-//
-
 import SwiftUI
 
 struct WeekView: View {
@@ -23,9 +16,3 @@ struct WeekView: View {
         }
     }
 }
-
-/*struct WeekView_Previews: PreviewProvider {
-    static var previews: some View {
-        WeekView()
-    }
-}*/

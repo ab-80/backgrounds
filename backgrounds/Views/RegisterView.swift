@@ -1,14 +1,6 @@
-//
-//  RegisterView.swift
-//  backgrounds
-//
-//  Created by Andrew Bergerson on 6/25/22.
-//
-
 import SwiftUI
 
 struct RegisterView: View {
-    @EnvironmentObject var appState: AppState
     @State private var firstName: String = ""
     @State private var showAlert = false
     
@@ -34,6 +26,9 @@ struct RegisterView: View {
             .multilineTextAlignment(.center)
             .padding()
         }
+        NavigationView {
+            WelcomeView()
+        }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
     
@@ -46,13 +41,6 @@ struct RegisterView: View {
         else {
             DefaultsManager.setFirstName(value: self.firstName)
             DefaultsManager.setIsRegistered(value: true)
-            appState.viewToShow = EnumManager.ViewName.welcome
         }
-    }
-}
-
-struct RegisterView_Previews: PreviewProvider {
-    static var previews: some View {
-        RegisterView()
     }
 }

@@ -8,10 +8,10 @@
 import Foundation
 
 public class UtilityManager {
-    public static func getGreeting() -> String {
+    /*public static func getGreeting() -> String {
         let name: String = DefaultsManager.getFirstName()
         return "Good evening, \(name)"
-    }
+    }*/
 }
 
 // https://gist.github.com/mecid/f8859ea4bdbd02cf5d440d58e936faec

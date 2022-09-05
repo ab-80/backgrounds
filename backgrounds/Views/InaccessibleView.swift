@@ -1,14 +1,6 @@
-//
-//  InaccessibleView.swift
-//  backgrounds
-//
-//  Created by Andrew Bergerson on 6/23/22.
-//
-
 import SwiftUI
 
 struct InaccessibleView: View {
-    @EnvironmentObject var appState: AppState
     var body: some View {
         VStack {
             VStack(spacing: 20) {
@@ -20,11 +12,5 @@ struct InaccessibleView: View {
             .padding()
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-    }
-}
-
-struct InaccessibleView_Previews: PreviewProvider {
-    static var previews: some View {
-        InaccessibleView()
     }
 }

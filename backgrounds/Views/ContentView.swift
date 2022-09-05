@@ -1,63 +1,53 @@
-//
-//  ContentView.swift
-//  backgrounds
-//
-//  Created by Andrew Bergerson on 6/23/22.
-//
-
 import SwiftUI
 import HealthKit
 
 struct ContentView: View {
     private var healthstoreManager: HealthstoreManager!
-    @ObservedObject var appState = AppState(showView: EnumManager.ViewName.welcome)
-    
+    private var firstView: EnumManager.ViewName  = EnumManager.ViewName.inaccessible
     init() {
         healthstoreManager = HealthstoreManager()
-        findFirstView()
+        self.firstView = findFirstView()
     }
     
     var body: some View {
         VStack {
-            switch appState.viewToShow {
+            Text("backgrounds").bold().frame(maxWidth: .infinity, alignment: .top).font(.title)
+            switch firstView {
             case EnumManager.ViewName.welcome:
-                WelcomeView().environmentObject(appState)
+                //WelcomeView().environmentObject(appState)
+                NavigationView {
+                    WelcomeView()
+                }
             case EnumManager.ViewName.inaccessible:
-                InaccessibleView().environmentObject(appState)
+                //InaccessibleView().environmentObject(appState)
+                NavigationView {
+                    InaccessibleView()
+                }
             case EnumManager.ViewName.register:
-                RegisterView().environmentObject(appState)
-            case EnumManager.ViewName.information:
-                InformationView().environmentObject(appState)
+                //RegisterView().environmentObject(appState)
+                NavigationView {
+                    RegisterView()
+                }
+            default:
+                NavigationView {
+                    InaccessibleView()
+                }
             }
         }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color(hue: 0.656, saturation: 0.787, brightness: 0.354))
         .preferredColorScheme(.dark)
     }
     
-    private func findFirstView() -> Void {
+    private func findFirstView() -> EnumManager.ViewName {
         if (!self.healthstoreManager.healthstoreAccessible()) {
-            appState.viewToShow = EnumManager.ViewName.inaccessible
+            return  EnumManager.ViewName.inaccessible
     }
         else if (!DefaultsManager.getIsRegistered()){
-            appState.viewToShow = EnumManager.ViewName.register
+            return EnumManager.ViewName.register
         }
         else {
-            appState.viewToShow = EnumManager.ViewName.welcome
+            return EnumManager.ViewName.welcome
         }
-    }
-}
-
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
-
-class AppState: ObservableObject {
-    @Published var viewToShow: EnumManager.ViewName
-
-    init(showView: EnumManager.ViewName) {
-        self.viewToShow = showView
     }
 }
