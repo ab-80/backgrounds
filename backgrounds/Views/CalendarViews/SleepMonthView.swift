@@ -19,25 +19,13 @@ struct SleepMonthView: View {
     func getDates() -> [DayView] {
         var last28Days: [DayView] = [DayView]()
         let today = Date()
-        var i: Int = 28
-        while (i > 0) {
-            let prevDay: Date = Calendar.current.date(byAdding: .day, value: -i, to: today)!
-            let formatter: DateFormatter = DateFormatter()
-            formatter.dateFormat = "dd"
-            let stringDate: String = self.removeFirstZero(input: formatter.string(from: prevDay))
-            last28Days.append(DayView(date: stringDate))
+        var i: Int = 27
+        while (i >= 0) {
+            let prevDate: Date = Calendar.current.date(byAdding: .day, value: -i, to: today)!
+            last28Days.append(DayView(date: prevDate))
             i -= 1
         }
         return last28Days
-    }
-    
-    private func removeFirstZero(input: String) -> String {
-        if (input.count <= 0) { return input }
-        else if (input[input.index(input.startIndex, offsetBy: 0)] == "0") {
-             return String(input[input.index(input.startIndex, offsetBy: 1)])
-        }
-        else { return input }
-        
     }
     
     private func turnMonthToWeeks(month: [DayView]) -> [[DayView]] {
